@@ -8,13 +8,16 @@ app.directive('hi', function(){
   };
 });
 
+var menu = ["hot", "rising", "controversial", "top" , "gilded" , "wikipromoted"];
+for (var i = 0; i < menu.length; i++) {
 app.directive('nav', function(){
   return {
     restrict: 'EA',
-    template: "<h2> hot | new | rising | controversial | top | gilded | wikipromoted </h2>",
+    template: '<button type="button" class="btn btn-primary"> menu[i] </button>',
     replace: false
   };
 });
+};
 
 app.directive('pics', function(){
   return {
