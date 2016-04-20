@@ -8,12 +8,12 @@ app.directive('hi', function(){
   };
 });
 
-var menu = ["hot", "rising", "controversial", "top" , "gilded" , "wikipromoted"];
-for (var i = 0; i < menu.length; i++) {
+
+for (var i = 0; i < {{menu.length}}; i++) {
 app.directive('nav', function(){
   return {
     restrict: 'EA',
-    template: '<button type="button" class="btn btn-primary"> menu[i] </button>',
+    template: '<button type="button" class="btn btn-primary"> {{menu[i]}} </button>',
     replace: false
   };
 });
