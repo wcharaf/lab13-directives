@@ -8,8 +8,8 @@ app.directive('hi', function(){
   };
 });
 
-app.controller('myController', function($scope){
-console.log($scope.menu);
+app.controller('myController', [function($scope){
+console.log($scope);
 var n = $scope.menu.length;
 for (var i = 0; i < n; i++) {
   app.directive('nav', function(){
@@ -20,7 +20,7 @@ for (var i = 0; i < n; i++) {
       };
     });
 };
-});
+}]);
 
 app.directive('pics', function(){
   return {
